@@ -6,7 +6,7 @@ const EmployeeList = () => {
   const [filteredEmployees, setFilteredEmployees] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [sortField, setSortField] = useState(null);
-  const [sortOrder, setSortOrder] = useState("asc"); // 'asc' or 'desc'
+  const [sortOrder, setSortOrder] = useState("asc");
 
   // Fetch employee data from the backend
   useEffect(() => {
@@ -78,14 +78,13 @@ const EmployeeList = () => {
     <>
       <nav>
         <Link to="/dashboard"> Home </Link>
-        {/*<Link to="/employee-list"> Employee List </Link>*/}
         <Link to="/employee-create"> Employee Create </Link>
         <span>Hukum Gupta</span>
         <button onClick={handleLogout}>Logout</button>
       </nav>
       <div className="employee-list">
         <h1>Employee List</h1>
-        {/* Search Filter */}
+        Search Filter
         <input
           type="text"
           placeholder="Search employees..."
@@ -93,7 +92,7 @@ const EmployeeList = () => {
           onChange={(e) => setSearchTerm(e.target.value)}
         />
 
-        {/* Employee Table */}
+        Employee Table
         <table border="1">
           <thead>
             <tr>

@@ -1,8 +1,6 @@
 const { z } = require("zod");
-//const jwt = require("jsonwebtoken");
 const t_login = require("../models/t_login");
 const bcrypt = require("bcryptjs");
-//const JWT_SECRET = "PASSWORD";
 
 const userSchema = z.object({
   username: z.string().min(1, { message: "Name is required" }),
@@ -70,9 +68,6 @@ const logIn = async (req, res) => {
         msg: "Invalid username or password ,2 Give alert Invalid Login",
       });
     }
-
-    // Generate JWT token
-    //const token = jwt.sign({ id: user._id }, JWT_SECRET, { expiresIn: "1h" });
 
     res.status(200).json({ success: true });
   } catch (error) {

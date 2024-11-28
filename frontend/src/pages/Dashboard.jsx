@@ -12,7 +12,6 @@ const Dashboard = () => {
       <nav>
         <Link to="/dashboard"> Home </Link>
         <Link to="/employee-list"> Employee List </Link>
-        {/*<Link to="/employee-create"> Employee Create </Link>*/}
         <span>Hukum Gupta</span>
         <button onClick={handleLogout}>Logout</button>
       </nav>

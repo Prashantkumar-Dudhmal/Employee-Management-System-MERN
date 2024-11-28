@@ -3,8 +3,8 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 
 const EmployeeEdit = () => {
-  const { id } = useParams(); // Get the employee ID from the URL
-  const navigate = useNavigate(); // For navigation after update
+  const { id } = useParams();
+  const navigate = useNavigate();
   const [employee, setEmployee] = useState({
     name: "",
     email: "",
@@ -23,7 +23,7 @@ const EmployeeEdit = () => {
         const response = await axios.get(
           `http://localhost:2002/employee/emp/${id}`
         );
-        setEmployee(response.data); // Populate the form with the employee data
+        setEmployee(response.data);
       } catch (err) {
         console.error("Error fetching employee data:", err);
         setError("Failed to load employee data. Please try again.");
@@ -79,8 +79,8 @@ const EmployeeEdit = () => {
     setEmployee((prev) => ({
       ...prev,
       course: prev.course.includes(course)
-        ? prev.course.filter((c) => c !== course) // Remove if already selected
-        : [...prev.course, course], // Add if not selected
+        ? prev.course.filter((c) => c !== course)
+        : [...prev.course, course],
     }));
   };
 
@@ -90,7 +90,6 @@ const EmployeeEdit = () => {
     <>
       <nav>
         <Link to="/dashboard"> Home </Link>
-        {/*<Link to="/employee-list"> Employee List </Link>*/}
         <Link to="/employee-create"> Employee Create </Link>
         <span>Hukum Gupta</span>
         <button onClick={handleLogout}>Logout</button>

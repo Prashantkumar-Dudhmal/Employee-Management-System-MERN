@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, {useState } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import "./EmployeeCreate.css";
 
 const EmployeeCreate = () => {
-  const { id } = useParams(); // Get the employee ID from the URL
-  const navigate = useNavigate(); // For navigation after update
+  const { id } = useParams();
+  const navigate = useNavigate(); 
   const [employee, setEmployee] = useState({
     name: "",
     email: "",
@@ -68,8 +68,8 @@ const EmployeeCreate = () => {
     setEmployee((prev) => ({
       ...prev,
       course: prev.course.includes(course)
-        ? prev.course.filter((c) => c !== course) // Remove if already selected
-        : [...prev.course, course], // Add if not selected
+        ? prev.course.filter((c) => c !== course) 
+        : [...prev.course, course],
     }));
   };
 
@@ -80,7 +80,6 @@ const EmployeeCreate = () => {
       <nav>
         <Link to="/dashboard"> Home </Link>
         <Link to="/employee-list"> Employee List </Link>
-        {/*<Link to="/employee-create"> Employee Create </Link>*/}
         <span>Hukum Gupta</span>
         <button onClick={handleLogout}>Logout</button>
       </nav>

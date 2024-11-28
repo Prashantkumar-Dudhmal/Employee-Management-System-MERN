@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Dashboard.css";
 
 const Dashboard = () => {
   const handleLogout = () => {
@@ -7,7 +8,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div>
+    <div className="dbrd">
       <nav>
         <Link to="/dashboard"> Home </Link>
         <Link to="/employee-list"> Employee List </Link>

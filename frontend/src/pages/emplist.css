@@ -1,0 +1,137 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+  }
+  
+  h1 {
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .employee-list {
+    max-width: 1400px;
+    margin: 20px auto;
+    background: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+  }
+  
+  /* Navigation Bar */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    padding: 10px 20px;
+    color: #ffffff;
+  }
+  
+  nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 16px;
+  }
+  
+  nav span {
+    font-weight: bold;
+  }
+  
+  nav button {
+    background: #ffffff;
+    color: #007bff;
+    border: 1px solid #ffffff;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  nav button:hover {
+    background: #0056b3;
+    color: #ffffff;
+  }
+  
+  /* Search Bar */
+  input[type="text"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Table Styles */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  thead {
+    background-color: #007bff;
+    color: #ffffff;
+  }
+  
+  thead th {
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+  }
+  
+  thead th:hover {
+    background-color: #0056b3;
+  }
+  .action-buttons {
+    display: flex;
+    gap: 5px; /* Space between buttons */
+  }
+  tbody tr {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  tbody td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  tbody img {
+    border-radius: 4px;
+  }
+  
+  /* Action Buttons */
+  button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button + button {
+    margin-left: 10px;
+  }
